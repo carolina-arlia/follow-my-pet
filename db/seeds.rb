@@ -38,18 +38,25 @@ vet1 = User.new(email: "vetboris@gmail.com", password: "123456", type_of_user: "
 vet2 = User.new(email: "vet2@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Dog Groomer and Bath Sebastien", doctors: "Dra. Carolina, Dra. Sofia", phone: "+65649856523", location: "Recoleta", longitude: 58.2326, latitude: 34.3526, speciality: "Bath")
 vet3 = User.new(email: "vet3@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Clinic Veterinary PetLover", doctors: "Dra. Clara, Dr. Lucas", phone: "+54659858623", location: "Mendoza", longitude: -68.8472, latitude: -32.8903, speciality: "Clinic, Surgery, Radiology, Lab")
 vet4 = User.new(email: "vet4@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Study and radiology center ScoobyDoo", doctors: "Dr. Juan Perez", phone: "+54659856523", location: "Santa Fe", longitude: 60.411680, latitude: 31.020240, speciality: "Clinic, Radiology, Nutrition, lab")
-# vet5 = User.new(email: "vet5@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Radiolody Center Little Horse", doctors: "Dr. Pedro Gomez, Dra. Carla Fernández", phone: "+54659855489", location: "Caballito", longitude: 60.411680, latitude: 31.020240, speciality: "Clinic, Radiology, Nutrition, lab")
-# vet6 = User.new(email: "vet6@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Radiolody Center Little Horse", doctors: "Dr. Pedro Gomez, Dra. Carla Fernández", phone: "+54659855489", location: "Caballito", longitude: 60.411680, latitude: 31.020240, speciality: "Clinic, Radiology, Nutrition, lab")
-
+vet5 = User.new(email: "vet5@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Radiolody Center Little Horse", doctors: "Dr. Pedro Gomez, Dra. Carla Fernández", phone: "+54659855489", location: "Caballito", longitude: -58.43809, latitude: -34.5883, speciality: "Clinic, Radiology, Nutrition, lab")
+vet6 = User.new(email: "vet6@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Clinic Veterinary Happy Dog", doctors: "Dr. Carlos Luis, Dra. Marta Sanchez", phone: "+5446855489", location: "Caballito", longitude: -58.4119, latitude: -34.63337, speciality: "Clinic, Radiology, Nutrition, lab")
+vet7 = User.new(email: "vet7@gmail.com", password: "123456", type_of_user: "Veterinary", name: "Dog Groomer Small Dog", doctors: "Dr. Eduardo Gonzalez", phone: "+54645685489", location: "Caballito", longitude: -58.402192, latitude: -34.6511, speciality: "Clinic, Radiology, Nutrition, lab")
 
 vet1.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/borisclinic.png')), filename: 'borisclinic.png')
 vet2.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/sebastien.png')), filename: 'sebastien.png')
 vet3.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/petlover.png')), filename: 'petlover.png')
 vet4.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/scooby.png')), filename: 'scooby.png')
+vet5.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/horse.png')), filename: 'horse.png')
+vet6.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/happydog.png')), filename: 'happydog.png')
+vet7.photo.attach(io: File.open(File.join(Rails.root, 'app/assets/images/smalldog.png')), filename: 'smalldog.png')
+
 vet1.save!
 vet2.save!
 vet3.save!
 vet4.save!
+vet5.save!
+vet6.save!
+vet7.save!
 puts "Done"
 
 puts "Creating users-pet-owners"
@@ -90,11 +97,11 @@ pet9 = Pet.new(user: owner3, name: "Nelly", species_type: species1, birthday: Da
 photo1 = URI.open("https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
 photo2 = URI.open("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=843&q=80")
 photo3 = URI.open("https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80")
-photo4 = URI.open("https://images.unsplash.com/photo-1544923408-75c5cef46f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80")
+photo4 = URI.open("https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80")
 photo5 = URI.open("https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80")
-photo6 = URI.open("https://images.unsplash.com/photo-1610055927873-825646a7a5b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80")
+photo6 = URI.open("https://images.unsplash.com/photo-1480044965905-02098d419e96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
 photo7 = URI.open("https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
-photo8 = URI.open("https://images.unsplash.com/photo-1560534493-fca50fa9bfe1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+photo8 = URI.open("https://images.unsplash.com/photo-1588331086909-9861b6e15a30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80")
 photo9 = URI.open("https://images.unsplash.com/photo-1547569026-e7e7c51be6f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=433&q=80")
 
 pet1.photo.attach(io: photo1, filename: "Aurelia.png", content_type: "image/png")
@@ -121,14 +128,14 @@ puts "Done"
 
 puts "Creating clinical histories"
 
-ch1pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Came for vaccination and control. Weight 5kg", date: DateTime.new(2022,9,1,11,0,6), name: "Vaccine and Control", type_of_history: "Vaccination")
-ch2pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Has ear pain. Asked for a radilogy.", date: DateTime.new(2022,8,1,11,0,6), name: "Ear pain", type_of_history: "Consult")
-ch3pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Lab results. Everything is ok. Normal results", date: DateTime.new(2022,4,1,11,0,6), name: "General check", type_of_history: "Study")
-ch4pet1 = ClinicalHistory.create!(user: vet2, pet: pet1, description: "Has a skin eruption. Sent for a lab result", date: DateTime.new(2021,12,1,11,0,6), name: "Eruption", type_of_history: "Consult")
-ch5pet1 = ClinicalHistory.create!(user: vet2, pet: pet1, description: "Vaccines of the year", date: DateTime.new(2021,6,1,11,0,6), name: "Vaccines", type_of_history: "Vaccination")
+ch1pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Came for vaccination and control. Weight 5kg. Suggested a bland diet to treat a dog's upset stomach. Rice and chicken removes the irritating substances from food to help your dog’s digestive system rebalance itself.", date: DateTime.new(2022,9,8,11,0,6), name: "Vaccine and Control", type_of_history: "Vaccination")
+ch2pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Has ear pain. Asked for a radiology. Clean ears using a medicated ear cleanser. Prescribed an ear cleanser and a topical medication to use at home. Prescribed oral antibiotics and anti-inflammatory medications.", date: DateTime.new(2022,8,20,11,0,6), name: "Ear pain", type_of_history: "Consult")
+ch3pet1 = ClinicalHistory.create!(user: vet1, pet: pet1, description: "Lab results. Everything is ok. Normal results", date: DateTime.new(2022,4,12,11,0,6), name: "General check", type_of_history: "Study")
+ch4pet1 = ClinicalHistory.create!(user: vet2, pet: pet1, description: "Has a skin eruption. Sent for a lab result", date: DateTime.new(2021,12,5,11,0,6), name: "Eruption", type_of_history: "Consult")
+ch5pet1 = ClinicalHistory.create!(user: vet2, pet: pet1, description: "Vaccines of the year", date: DateTime.new(2021,6,17,11,0,6), name: "Vaccines", type_of_history: "Vaccination")
 
 ch1pet2 = ClinicalHistory.create!(user: vet3, pet: pet2, description: "Came for vaccination and control. Weight 10kg.", date: DateTime.new(2020,6,20,11,0,6), name: "Vaccine and Control", type_of_history: "Vaccination")
-ch2pet2 = ClinicalHistory.create!(user: vet3, pet: pet2, description: "Has ear pain. Asked for a radilogy.", date: Date.today, name: "Dolor oidos", type_of_history: "Consult")
+ch2pet2 = ClinicalHistory.create!(user: vet3, pet: pet2, description: "Has ear pain. Asked for a radiology.", date: Date.today, name: "Dolor oidos", type_of_history: "Consult")
 ch3pet2 = ClinicalHistory.create!(user: vet1, pet: pet2, description: "Lab results. Everything is ok. Normal results", date: Date.today, name: "General check", type_of_history: "Study")
 ch4pet2 = ClinicalHistory.create!(user: vet2, pet: pet2, description: "Has a skin eruption. Sent for a lab result", date: Date.today, name: "Eruption", type_of_history: "Consult")
 ch5pet2 = ClinicalHistory.create!(user: vet4, pet: pet2, description: "Vaccines of the year", date: Date.today, name: "Vaccines", type_of_history: "Vaccination")
@@ -192,7 +199,7 @@ app12 = Appointment.create!(user: vet4, pet: pet2, start_time: DateTime.new(2022
 app13 = Appointment.create!(user: vet2, pet: pet1, start_time: DateTime.new(2022,9,10,13,0,6))
 app14 = Appointment.create!(user: vet3, pet: pet2, start_time: DateTime.new(2022,9,11,14,0,6))
 
-app15 = Appointment.create!(user: vet1, pet: pet5, start_time: DateTime.new(2022,9,8,10,0,6))
+app15 = Appointment.create!(user: vet1, pet: pet5, start_time: DateTime.new(2022,9,9,10,0,6))
 app16 = Appointment.create!(user: vet2, pet: pet6, start_time: DateTime.new(2022,9,18,11,0,6))
 app17 = Appointment.create!(user: vet4, pet: pet7, start_time: DateTime.new(2022,9,19,12,0,6))
 app18 = Appointment.create!(user: vet2, pet: pet8, start_time: DateTime.new(2022,9,10,13,0,6))
